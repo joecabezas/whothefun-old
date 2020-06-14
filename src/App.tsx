@@ -1,9 +1,12 @@
 import * as React from 'react';
 
+import {hot} from 'react-hot-loader/root';
+import PictureCard from './components/PictureCard';
+
 const App: React.FC = () => {
   return (
-    <h1>Hello!</h1>
+    <PictureCard />
   );
 };
 
-export default App;
+export default hot(App);

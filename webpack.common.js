@@ -1,17 +1,21 @@
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: [
+    'react-hot-loader/patch',
+    './src/index.tsx',
+  ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
+        use: 'babel-loader',
       },
     ],
   },
@@ -20,6 +24,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'k014\'s WTF',
 
