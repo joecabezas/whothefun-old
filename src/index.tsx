@@ -1,9 +1,13 @@
+import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {Hello} from './components/Hello';
+import App from './App';
+import store from './redux/store';
 
 ReactDOM.render(
-    <Hello name="Joe"/>,
+    <Provider store={store}>
+      <App />
+    </Provider>,
     document.getElementById('app'),
 );
