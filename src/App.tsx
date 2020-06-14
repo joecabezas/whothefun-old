@@ -1,11 +1,12 @@
 import * as React from 'react';
 
 import {hot} from 'react-hot-loader/root';
-import PictureCard from './components/PictureCard';
+
+import Board from './Board';
 
 const App: React.FC = () => {
   return (
-    <PictureCard />
+    <Board />
   );
 };
 
