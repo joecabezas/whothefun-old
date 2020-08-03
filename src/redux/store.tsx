@@ -1,10 +1,10 @@
-import {createStore} from 'redux';
+import {combineReducers, createStore} from 'redux';
 
 import {devToolsEnhancer} from 'redux-devtools-extension';
 
 export default createStore(
-    () => {
-      return {};
-    },
+    combineReducers({
+      board: boardReducer,
+    }),
     devToolsEnhancer({}),
 );

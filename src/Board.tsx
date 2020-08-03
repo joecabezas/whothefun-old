@@ -2,8 +2,6 @@ import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import * as React from 'react';
 
-import {hot} from 'react-hot-loader/root';
-
 import PictureCard from './components/PictureCard';
 
 const useStyles = makeStyles((theme) => ({
@@ -46,4 +44,4 @@ const Board: React.FC = () => {
   );
 };
 
-export default hot(Board);
+export default Board;
